@@ -1,18 +1,26 @@
 @use '../utlil/' as *;
-// .toggle{
+.toggle{
+    border: none;
+    &__wrapper{
 
-//     $__button {
-//       width:  rem(16);
-//       height: rem(16);
-//       border-radius:50%;
-//       bacl
+    }
+    input[type="radio"]{
 
-//     }
-// }
-.toggle__button {
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    border-radius: 50%;
-    background-color: var(--toggle);
+    }
+    &__background{
+
+    }
+
+    &__button {
+      width:  rem(16);
+      height: rem(16);
+      border-radius:50%;
+      background-color: var(--toggle)
+
+    }
+
+    &__label {
+        
+    }
+
 }

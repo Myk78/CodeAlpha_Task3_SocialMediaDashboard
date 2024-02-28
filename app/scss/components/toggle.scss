@@ -3,17 +3,24 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
+    gap: rem(4.8) rem(8);
     border: none;
+    margin: 0;
 
     
     label {
+        font-size: rem(14);
+        align-self: center;
+
         &[for='dark']{
             grid-column: 1/2 ;
+            justify-self: center;
         }
         &[for='system']{
-            grid-column: 1/end;
+            grid-column: 1/4;
             grid-row: 2/3;
             justify-self: center;
+            align-self: center;
             
         }
         &[for='light']{
@@ -32,8 +39,15 @@
     }
 
     input[type="radio"]{
-        margin: 0;
+        margin: 0 rem(-2) 0 rem(-2);
         opacity: 0;
+        width: rem(24);
+        height: rem(24);
+
+        &:focus ~ .toggle__button{
+            border: 2px solid #fff;
+
+        }
     }
 
     &__background{

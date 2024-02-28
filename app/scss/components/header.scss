@@ -1,14 +1,19 @@
 @use '../utlil/' as *;
 
 .header{
-
+    display: flex;
+    flex-wrap: wrap;
     margin-top: rem(36);
     @include breakpoint(medium) {
-        display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__title{
+        width: 100%;
+        @include breakpoint(medium){
+            width: auto;
+        }
 
     }
 
@@ -19,6 +24,6 @@
     }
 
     &__toggle{
-
+        margin-left: auto;
     }
 }

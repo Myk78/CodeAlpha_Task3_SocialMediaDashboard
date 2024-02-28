@@ -1,5 +1,95 @@
 @use '../utlil/' as *;
 
 .card{
-    padding: rem(20);
+    background: var(--dark-card);
+    color: var(--dark-text1);
+    width: rem(255); // temporary
+    padding: rem(25);
+    text-align: center;
+    &--facebook{
+
+    }
+    &--twitter{
+
+    }
+    &--instagram{
+
+    }
+    &--youtubek{
+
+    }
+
+    &__platform{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: rem(28);
+
+    }
+
+
+
+    &__icon{
+        margin-right: rem(8);
+        &--facebook{
+
+        }
+        &--twitter{
+
+        }
+        &--instagram{
+
+        }
+        &--youtubek{
+
+        }
+    }
+
+    &__username{
+        font-size: rem(12);
+        font-weight: 700;
+    }
+
+    &__follower{
+        margin-bottom: rem(25);
+    }
+
+    &__count{
+        color: var(--light-bg);
+        font-weight: 700;
+        letter-spacing: (-2);
+        line-height: 1;
+        margin-bottom: rem(5);
+
+        &--big{
+            font-size: rem(56);
+
+        }
+        &--small{
+
+        }
+
+    }
+    &__label{
+        font-size: rem(12);
+        font-weight: 400;
+        color: var(--dark-text1);
+        letter-spacing: rem(5);
+        text-transform: uppercase;
+        
+        // line-height: 1.1;
+
+    }
+    &__change{
+        font-size: rem(12);
+        font-weight: 700;
+        &--up{
+            color: var(--limegreen);
+
+        }
+        &--down{
+            color: var(--brightred);
+
+        }
+    }
 }

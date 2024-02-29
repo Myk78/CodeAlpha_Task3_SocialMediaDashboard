@@ -1,2 +1,2 @@
-"use strict";
+"use strict";for(var radiobuttons=document.querySelectorAll(".toggle__wrapper input"),i=0;i<radiobuttons.length;i++)radiobuttons[i].addEventListener("click",(function(t){document.getElementById("dark").checked?document.querySelector("body").classList="dark":document.querySelector("body").classList="light"}));
 //# sourceMappingURL=script.js.map

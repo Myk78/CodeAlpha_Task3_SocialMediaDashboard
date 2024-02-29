@@ -1,8 +1,7 @@
 @use '../utlil/' as *;
 .toggle{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: 1fr rem(48) ;
     gap: rem(4.8) rem(8);
     border: none;
     margin: 0;
@@ -11,17 +10,12 @@
     label {
         font-size: rem(14);
         align-self: center;
+        font-weight: 700;
+        color: var(--toggle);
 
         &[for='dark']{
             grid-column: 1/2 ;
             justify-self: center;
-        }
-        &[for='system']{
-            grid-column: 1/4;
-            grid-row: 2/3;
-            justify-self: center;
-            align-self: center;
-            
         }
         &[for='light']{
         grid-column: 3/4;
@@ -57,8 +51,7 @@
         width: 100%;
         top: 0;
         border-radius: rem(12);
-        background: linear-gradient(255deg,var(--toggle-bg-start) 0%,
-        var(--toggle-bg-end) 98.82%);
+        background: var(--toggle-bg);
         pointer-events: none;
     }
 
@@ -70,7 +63,7 @@
       width:  rem(18);
       height: rem(18);
       border-radius:50%;
-      background-color: var(--dark-bg);
+      background-color: var(--toggle-button);
       transition: all 150ms ease-in-out;
 
       ~ #light:checked{

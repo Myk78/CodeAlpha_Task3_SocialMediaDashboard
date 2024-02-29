@@ -1,28 +1,65 @@
 @use '../utlil/' as *;
 
+.cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    gap: rem(30);
+
+    @include breakpoint(medium){
+        grid-template-columns: repeat(2,1fr);
+        
+      }
+
+      @include breakpoint(large){
+        grid-template-columns: repeat(4,1fr);
+      }
+}
+
 .card{
+    // flex: 1;
+    position: relative;
+    overflow: hidden;
     background: var(--dark-card);
     color: var(--dark-text1);
-    width: rem(255); // temporary
+    // width: rem(255); // temporary
     padding: rem(25);
+    border-radius: rem(5);
     text-align: center;
     &--facebook{
+        border-top: rem(5) solid var(--Facebook);
 
     }
     &--twitter{
+        border-top: rem(5) solid var(--Twitter);
 
     }
     &--instagram{
+        padding-top: rem(30);
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: rem(5);
+            background: linear-gradient(225deg,var(--Instagram-end),var(--Instagram-middle) 50.91%,var(--Instagram-start) 100%) 
+        }
+        // border-top: rem(5) solid var(--Instagram-start) ;
 
     }
-    &--youtubek{
+    &--youtube{
+        border-top: rem(5) solid var(--YouTube);
 
     }
 
     &__platform{
         display: flex;
+        margin-top: rem(5);
         justify-content: center;
         align-items: center;
+        height: rem(20);
         margin-bottom: rem(28);
 
     }
@@ -81,15 +118,23 @@
 
     }
     &__change{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: rem(12);
         font-weight: 700;
+
         &--up{
-            color: var(--limegreen);
+            @extend .card__change;
+            color: var(--LimeGreen);
 
         }
         &--down{
-            color: var(--brightred);
+            color: var(--BrightRed);
 
         }
+    }
+    &__number{
+        margin-right: rem(4);
     }
 }
